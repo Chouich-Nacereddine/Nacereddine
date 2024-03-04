@@ -1,26 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
-import "./Style.css";
+import "boxicons";
 
 const Home = () => {
   const el = useRef(null);
+  const [hover, setHover] = useState(null);
 
   useEffect(() => {
     if (el.current) {
       const typed = new Typed(el.current, {
         strings: [
-          "<span style='color: #FF6600;'>Y</span>our <span style='color: #FF0000;'>M</span>eeting <span style='color: #FFC300;'>H</span>ub!",
-          "<span style='color: #FF6600;'>T</span>rans<span style='color: #FF0000;'>L</span>ingo.<span style='color: #FFC300;'>M</span>eet",
+          "<span style='color: #ff7961; font-weight: 600;'>N</span>acereddine <span style='color: #ff7961; font-weight: 600;'>C</span>houich.",
+          "",
         ],
-        typeSpeed: 50,
+        typeSpeed: 100,
         loop: true,
       });
 
       return () => {
-        // Destroy Typed instance during cleanup to stop animation
         typed.destroy();
       };
     }
@@ -28,35 +28,108 @@ const Home = () => {
 
   return (
     <>
-      <section className="HomeSection pt-24 px-6 flex flex-col-reverse lg:h-screen lg:-z-10 lg:sticky lg:top-0 lg:flex-row lg:items-center lg:justify-center lg:px-8">
-        <div className="flex flex-col justify-center lg:w-[55vw] ">
-          <h1 className=" text-2xl lg:text-5xl">
-            Welcome to <span ref={el} />
-          </h1>
-          <h2 className="text-lg lg:text-2xl pb-4 lg:pb-10">
-            <span className="text-[#FF6600]">C</span>onnect,{" "}
-            <span className="text-[#FF0000]">C</span>ollaborate,{" "}
-            <span className="text-[#FFC300]">C</span>onquer
-          </h2>
-          <p className="text-sm xl:text-lg pb-4 lg:w-[90%] text-justify lg:text-xl lg:pb-6">
-            Revolutionize your meetings with our seamless platform designed for
-            efficiency, collaboration, and real-time translation. Say goodbye to
-            hassle and hello to productivity as you effortlessly communicate
-            across languages!
+      <section className="lg:Home-bg-img flex flex-col-reverse mt-[10vh] lg:mt-0 lg:flex-row items-center justify-between h-screen ">
+        <div className="relative lg:max-w-[55vw] max-w-[100vw] px-[8%] h-screen lg:items-start flex flex-col lg:justify-center items-center bg-opacity-10 bg-black lg:pt-0 pt-16 ">
+          <div
+            className="lg:text-4xl text-2xl tracking-wider overflow-hidden w-max "
+            id="content"
+          >
+            <h1 className="flex ">
+              Hi, I'm {" "}
+              <span className="lg:hidden block">
+                <span className="text-[#FF7961] font-semibold">N</span>
+                acereddine{" "}
+                <span className="text-[#FF7961] font-semibold">C</span>houich.
+              </span>
+              <span className="lg:block hidden">
+                <span ref={el} />
+              </span>
+            </h1>
+          </div>
+          <div className="text-animated lg:text-4xl text-xl">
+            <h3>FullStack Developer</h3>
+          </div>
+          <p className="lg:text-base text-xs text-justify w-[92%] mt-2 text-[#ededed] tracking-wide">
+            I'm a FullStack Developer with a passion for crafting web solutions
+            that blend creativity and functionality. With a strong foundation in
+            both front-end and back-end development, I thrive on turning
+            innovative ideas into seamless digital experiences. Let's build
+            something amazing together.
           </p>
-          <Link href="/get-started">
-            <div className="bg-[#FF6600] w-max text-sm py-2 px-4 lg:text-lg rounded-full text-black font-bold hover:cursor-pointer active:scale-[.8]">
-              <p>Get started</p>
-            </div>
-          </Link>
+
+          <div className="flex items-center justify-start mt-4">
+            <Link
+              href="#Contact"
+              className="flex items-center justify-center w-max h-max text-xl font-black"
+            >
+              <div className="btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span>Hire Me</span>
+              </div>
+            </Link>
+          </div>
+          <div className="absolute lg:bottom-10 bottom-[100%] flex justify-start gap-6 items-center">
+            <Link href="">
+              <span
+                className="border-2 border-[#FF7961] p-1 flex items-center justify-center rounded-full transition-all duration-300 hover:bg-[#FF7961]"
+                onMouseEnter={() => setHover("instagram")}
+                onMouseLeave={() => setHover(null)}
+              >
+                <box-icon
+                  type="logo"
+                  name="instagram"
+                  color={hover === "instagram" ? "black" : "#FF7961"}
+                  size="sm"
+                ></box-icon>
+              </span>
+            </Link>
+            <Link href="">
+              <span
+                className="border-2 border-[#FF7961] p-1 flex items-center justify-center rounded-full transition-all duration-300 hover:bg-[#FF7961]"
+                onMouseEnter={() => setHover("github")}
+                onMouseLeave={() => setHover(null)}
+              >
+                <box-icon
+                  name="github"
+                  type="logo"
+                  color={hover === "github" ? "black" : "#FF7961"}
+                  size="sm"
+                ></box-icon>
+              </span>
+            </Link>
+            <Link href="">
+              <span
+                className="border-2 border-[#FF7961] p-1 flex items-center justify-center rounded-full transition-all duration-300 hover:bg-[#FF7961]"
+                onMouseEnter={() => setHover("linkedin")}
+                onMouseLeave={() => setHover(null)}
+              >
+                <box-icon
+                  name="linkedin"
+                  type="logo"
+                  color={hover === "linkedin" ? "black" : "#FF7961"}
+                  size="sm"
+                ></box-icon>
+              </span>
+            </Link>
+          </div>
         </div>
-        <div className="pb-10 lg:w-[40vw] flex items-start justify-center">
+
+        <div className="hidden w-[50vw] p-0 lg:flex items-center justify-center h-full pt-16 bg-opacity-10 bg-black">
           <img
-            src="/assets/Home.png"
-            alt="Home.png"
-            className="-z-10 homeIMG w-60 lg:w-80 xl:w-96 h-auto mt-8 lg:mt-0"
+            src="/assets/me4.png"
+            alt="me"
+            className=" lg:w-[100%] lg:bg-shadow lg:mr-[10%]"
           />
         </div>
+        <img
+          src="/assets/me6.png"
+          alt="me"
+          className="lg:hidden block w-[50vw]"
+        />
       </section>
     </>
   );

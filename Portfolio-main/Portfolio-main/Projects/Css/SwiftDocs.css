@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: #ededed;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+.SwiftDocs_container {
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 2px;
+  font-family: "Roboto", sans-serif;
+
+  .Title {
+    align-self: center;
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    max-width: 70vw;
+  }
+
+  .icon {
+    color: #ff6600;
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+
+  .SwiftDocs_description {
+    text-align: justify ;
+    max-width: 70vw;
+    margin-top: 5vh;
+    font-weight: 500;
+    padding: 3rem;
+    border: 2px solid #ff6600;
+    border-radius: 10rem;
+    .highlight {
+        background-color: #ff6600;
+        color: black;
+        font-size: 1.2rem;
+      }
+  }
+
+  .SwiftDocs_Video_container {
+    margin-top: 10vh;
+    .Video_Demo {
+        text-align: center;
+        margin-bottom: 5vh;
+        color: #ff6600;
+    }
+
+    .video {
+        padding: 1.5rem;
+        background-color: #ff6600;
+        border-radius: 2rem;
+    }
+  }
+}
+
+.S {
+  color: #d30a0a;
+}
+
+.D {
+  color: #ff6600;
+}

@@ -1,102 +1,112 @@
-"use client"
+"use client";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); 
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("Home");
   return (
     <>
-      <nav className="z-20 w-full flex items-center justify-between py-2 px-4 lg:px-8 bg-[#1D1F21] fixed">
-        <div className="flex items-center lg:pr-80">
-          <Link href="/">
-            <span className="text-[35px] text-gray-300 font-semibold">
-              <span className="text-[#FF6600]">T</span>rans
-              <span className="text-[#FF0000]">L</span>ingo.
-              <span className="text-[#FFC300]">M</span>eet
-            </span>
-          </Link>
-        </div>
-        <div className="hidden lg:flex lg:flex-grow lg:items-center lg:justify-between lg:w-auto">
-          <ul className="lg:w-[20vw] flex flex-row justify-between items-center text-xl font-[Inter] text-gray-300">
-            <li>
-              <Link href="/">
-                <span className="nav-link">Home</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="#about">
-                <span className="nav-link">About us</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="#contact">
-                <span className="nav-link">Contact us</span>
-              </Link>
-            </li>
-          </ul>
-          <div className="text-xl font-semibold text-[#FF6600] ml-6">
-            <Link href={'get-started'}>
-              <span className="nav-link">Get started</span>
-            </Link>
-          </div>
-        </div>
-        <div className="block lg:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-300 hover:text-white focus:outline-none"
+      <header className="fixed top-0 left-0 w-full py-6 px-[8%] bg-black flex justify-between items-center z-[100]">
+        <Link
+          href="/"
+          className="text-2xl text-[#ededed] tracking-wider"
+          onClick={() => {
+            setActiveLink("Home");
+          }}
+        >
+          <span className="text-[#ff7961] text-4xl font-black">N</span>
+          acereddine
+          <span className="text-[#ff7961] text-4xl font-black">.</span>
+        </Link>
+
+        <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <FontAwesomeIcon
+            icon={isOpen ? faXmark : faBars}
+            size="lg"
+            color="#ff7961"
+          />
+        </button>
+        <nav
+          className={`lg:block lg:translate-x-[59vw] lg:w-max lg:h-max lg:pt-8 lg:px-0 lg:mt-0 flex flex-col z-10 mt-[12vh] gap-2 fixed top-0 left-0 w-[50vw] h-screen py-3 px-[8%] text-lg text-[#ededed] bg-black bg-opacity-85 transition-transform duration-300 ${
+            isOpen ? "" : "-translate-x-[100vw]"
+          }`}
+        >
+          {/* <nav className={`lg:block hidden text-lg text-[#ededed] transition-transform duration-300 ${isOpen ? '' : ''}`}> */}
+          <Link
+            href="/"
+            className={`lg:ml-6 transition-[.3s] hover:text-[#ff7961] ${
+              activeLink === "Home"
+                ? "text-[#ff7961] lg:border-0 border-r border-b border-[#ff7961] lg:rounded-full lg:px-2 font-semibold"
+                : ""
+            }`}
+            onClick={() => {
+              setActiveLink("Home");
+              setIsOpen(false);
+            }}
           >
-            <svg
-              className="w-6 h-6 fill-current"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {isOpen ? (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 4H4v2h16v-2z"
-                />
-              ) : (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
-      </nav>
-      {/* Responsive menu */}
-      <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } fixed w-full lg:hidden bg-[#1D1F21] py-2 px-4  top-16`}
-      >
-        <ul className=" flex flex-col items-center text-xl font-[Inter] text-gray-300">
-          <li className="my-2">
-            <Link href="/">
-              <span className="nav-link">Home</span>
-            </Link>
-          </li>
-          <li className="my-2">
-            <Link href="#about">
-              <span className="nav-link">About us</span>
-            </Link>
-          </li>
-          <li className="my-2">
-            <Link href="#contact">
-              <span className="nav-link">Contact us</span>
-            </Link>
-          </li>
-          <li className="my-2">
-            <Link href="get-started">
-              <span className="nav-link">Get started</span>
-            </Link>
-          </li>
-        </ul>
-      </div>
+            Home
+          </Link>
+          <Link
+            href="#About"
+            className={`lg:ml-6 transition-[.3s] hover:text-[#ff7961] ${
+              activeLink === "About"
+                ? "text-[#ff7961] lg:border-0 border-r border-b border-[#ff7961] lg:rounded-full lg:px-2 font-semibold"
+                : ""
+            }`}
+            onClick={() => {
+              setActiveLink("About");
+              setIsOpen(false);
+            }}
+          >
+            About
+          </Link>
+          <Link
+            href="#Portfolio"
+            className={`lg:ml-6 transition-[.3s] hover:text-[#ff7961] ${
+              activeLink === "Portfolio"
+                ? "text-[#ff7961] lg:border-0 border-r border-b border-[#ff7961] lg:rounded-full lg:px-2 font-semibold"
+                : ""
+            }`}
+            onClick={() => {
+              setActiveLink("Portfolio");
+              setIsOpen(false);
+            }}
+          >
+            Portfolio
+          </Link>
+          <Link
+            href="#Services"
+            className={`lg:ml-6 transition-[.3s] hover:text-[#ff7961] ${
+              activeLink === "Services"
+                ? "text-[#ff7961] lg:border-0 border-r border-b border-[#ff7961] lg:rounded-full lg:px-2 font-semibold"
+                : ""
+            }`}
+            onClick={() => {
+              setActiveLink("Services");
+              setIsOpen(false);
+            }}
+          >
+            Services
+          </Link>
+          <Link
+            href="#Contact"
+            className={`lg:ml-6 transition-[.3s] hover:text-[#ff7961] ${
+              activeLink === "Contact"
+                ? "text-[#ff7961] lg:border-0 border-r border-b border-[#ff7961] lg:rounded-full lg:px-2 font-semibold"
+                : ""
+            }`}
+            onClick={() => {
+              setActiveLink("Contact");
+              setIsOpen(false);
+            }}
+          >
+            Contact
+          </Link>
+        </nav>
+      </header>
     </>
   );
 };

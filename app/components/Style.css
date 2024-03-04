@@ -1,6 +1,6 @@
 .HomeSection {
-    background-image: url("/assets/pngegg.png");
-    background-size: 110%;
+  background-image: url("/assets/pngegg.png");
+  background-size: 110%;
 }
 
 .homeIMG {
@@ -22,14 +22,14 @@
 }
 
 .aboutSection {
-  box-shadow: -70px -180px 100px 0px #1D1F21;
+  box-shadow: -70px -180px 100px 0px #1d1f21;
 }
 
 /* contact-us Form*/
 .form-container {
   width: 500px;
   background: linear-gradient(#212121, #212121) padding-box,
-              linear-gradient(145deg, transparent 35%,#FF6600, #676a6b) border-box;
+    linear-gradient(145deg, transparent 35%, #ff6600, #676a6b) border-box;
   border: 2px solid transparent;
   padding: 32px 24px;
   font-size: 14px;
@@ -59,7 +59,7 @@
 }
 
 .form-container button:active {
-  transform: scale(.95);
+  transform: scale(0.95);
 }
 
 .form-container .form {
@@ -110,12 +110,12 @@
 
 .form-container .form-group input:focus {
   outline: none;
-  border-color: #FFC300;
+  border-color: #ffc300;
 }
 
 .form-container .form-group textarea:focus {
   outline: none;
-  border-color: #FFC300;
+  border-color: #ffc300;
 }
 
 .form-container .form-submit-btn {
@@ -138,10 +138,7 @@
 }
 
 .form-container .form-submit-btn:hover {
-  background-color: #FF6600;
-  border-color: #FF6600;
+  background-color: #ff6600;
+  border-color: #ff6600;
   color: black;
 }
-
-
-
