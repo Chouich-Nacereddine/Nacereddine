@@ -34,12 +34,11 @@ const Navbar = () => {
             isOpen ? "" : "-translate-x-[100vw]"
           }`}
         >
-          {/* <nav className={`lg:block hidden text-lg text-[#ededed] transition-transform duration-300 ${isOpen ? '' : ''}`}> */}
           <Link
             href="/"
             className={`lg:ml-6 transition-[.3s] hover:text-[#ff7961] ${
               activeLink === "Home"
-                ? "text-[#ff7961] lg:border-0 border-r border-b border-[#ff7961] lg:rounded-full lg:px-2 font-semibold"
+                ? "text-[#ff7961] font-semibold"
                 : ""
             }`}
             onClick={() => {
@@ -53,7 +52,7 @@ const Navbar = () => {
             href="#About"
             className={`lg:ml-6 transition-[.3s] hover:text-[#ff7961] ${
               activeLink === "About"
-                ? "text-[#ff7961] lg:border-0 border-r border-b border-[#ff7961] lg:rounded-full lg:px-2 font-semibold"
+                ? "text-[#ff7961] font-semibold"
                 : ""
             }`}
             onClick={() => {
@@ -67,7 +66,7 @@ const Navbar = () => {
             href="#Portfolio"
             className={`lg:ml-6 transition-[.3s] hover:text-[#ff7961] ${
               activeLink === "Portfolio"
-                ? "text-[#ff7961] lg:border-0 border-r border-b border-[#ff7961] lg:rounded-full lg:px-2 font-semibold"
+                ? "text-[#ff7961] font-semibold"
                 : ""
             }`}
             onClick={() => {
@@ -81,7 +80,7 @@ const Navbar = () => {
             href="#Services"
             className={`lg:ml-6 transition-[.3s] hover:text-[#ff7961] ${
               activeLink === "Services"
-                ? "text-[#ff7961] lg:border-0 border-r border-b border-[#ff7961] lg:rounded-full lg:px-2 font-semibold"
+                ? "text-[#ff7961] font-semibold"
                 : ""
             }`}
             onClick={() => {
@@ -95,7 +94,7 @@ const Navbar = () => {
             href="#Contact"
             className={`lg:ml-6 transition-[.3s] hover:text-[#ff7961] ${
               activeLink === "Contact"
-                ? "text-[#ff7961] lg:border-0 border-r border-b border-[#ff7961] lg:rounded-full lg:px-2 font-semibold"
+                ? "text-[#ff7961] font-semibold"
                 : ""
             }`}
             onClick={() => {

@@ -148,6 +148,7 @@ const Home = () => {
           />
         </div>
         <img
+          data-aos="fade-up"
           src="/assets/me6.png"
           alt="me"
           className="lg:hidden block w-[50vw]"
