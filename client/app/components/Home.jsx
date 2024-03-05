@@ -2,12 +2,20 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 import Typed from "typed.js";
 import "boxicons";
 
 const Home = () => {
   const el = useRef(null);
   const [hover, setHover] = useState(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
 
   useEffect(() => {
     if (el.current) {
@@ -28,14 +36,14 @@ const Home = () => {
 
   return (
     <>
-      <section className="lg:Home-bg-img flex flex-col-reverse mt-[10vh] lg:mt-0 lg:flex-row items-center justify-between h-screen ">
+      <section className="lg:bg-home-bg-img lg:bg-no-repeat lg:bg-right-19vh lg:bg-60 flex flex-col-reverse mt-[10vh] lg:mt-0 lg:flex-row items-center justify-between h-screen ">
         <div className="relative lg:max-w-[55vw] max-w-[100vw] px-[8%] h-screen lg:items-start flex flex-col lg:justify-center items-center bg-opacity-10 bg-black lg:pt-0 pt-16 ">
           <div
             className="lg:text-4xl text-2xl tracking-wider overflow-hidden w-max "
             id="content"
           >
-            <h1 className="flex ">
-              Hi, I'm {" "}
+            <h1 className="flex" data-aos="fade-up">
+              Hi, I'm&nbsp;
               <span className="lg:hidden block">
                 <span className="text-[#FF7961] font-semibold">N</span>
                 acereddine{" "}
@@ -49,7 +57,11 @@ const Home = () => {
           <div className="text-animated lg:text-4xl text-xl">
             <h3>FullStack Developer</h3>
           </div>
-          <p className="lg:text-base text-xs text-justify w-[92%] mt-2 text-[#ededed] tracking-wide">
+          <p
+            data-aos="zoom-in"
+            data-aos-delay="200"
+            className="lg:text-base text-xs lg:text-justify text-center w-full mt-2 text-[#ededed] tracking-wide"
+          >
             I'm a FullStack Developer with a passion for crafting web solutions
             that blend creativity and functionality. With a strong foundation in
             both front-end and back-end development, I thrive on turning
@@ -57,7 +69,10 @@ const Home = () => {
             something amazing together.
           </p>
 
-          <div className="flex items-center justify-start mt-4">
+          <div
+            className="flex items-center justify-start mt-4"
+            data-aos="fade-right"
+          >
             <Link
               href="#Contact"
               className="flex items-center justify-center w-max h-max text-xl font-black"
@@ -72,8 +87,11 @@ const Home = () => {
               </div>
             </Link>
           </div>
-          <div className="absolute lg:bottom-10 bottom-[100%] flex justify-start gap-6 items-center">
-            <Link href="">
+          <div className="absolute lg:left-auto left-[36%] lg:bottom-10 bottom-[100%] flex lg:justify-start gap-6 lg:items-center">
+            <Link
+              href="https://www.instagram.com/nacer_edd/?igsh=ZHY2bnB1d2puMWMy&utm_source=qr"
+              target="_blanc"
+            >
               <span
                 className="border-2 border-[#FF7961] p-1 flex items-center justify-center rounded-full transition-all duration-300 hover:bg-[#FF7961]"
                 onMouseEnter={() => setHover("instagram")}
@@ -87,7 +105,7 @@ const Home = () => {
                 ></box-icon>
               </span>
             </Link>
-            <Link href="">
+            <Link href="https://github.com/Chouich-Nacereddine" target="_blanc">
               <span
                 className="border-2 border-[#FF7961] p-1 flex items-center justify-center rounded-full transition-all duration-300 hover:bg-[#FF7961]"
                 onMouseEnter={() => setHover("github")}
@@ -101,7 +119,10 @@ const Home = () => {
                 ></box-icon>
               </span>
             </Link>
-            <Link href="">
+            <Link
+              href="https://www.linkedin.com/in/nacreddine-chouich/"
+              target="_blanc"
+            >
               <span
                 className="border-2 border-[#FF7961] p-1 flex items-center justify-center rounded-full transition-all duration-300 hover:bg-[#FF7961]"
                 onMouseEnter={() => setHover("linkedin")}
@@ -120,9 +141,10 @@ const Home = () => {
 
         <div className="hidden w-[50vw] p-0 lg:flex items-center justify-center h-full pt-16 bg-opacity-10 bg-black">
           <img
+            data-aos="fade-down-left"
             src="/assets/me4.png"
             alt="me"
-            className=" lg:w-[100%] lg:bg-shadow lg:mr-[10%]"
+            className=" lg:w-[100%] lg:mr-[10%]"
           />
         </div>
         <img

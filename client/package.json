@@ -11,10 +11,11 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "aos": "^3.0.0-beta.6",
     "axios": "^1.6.7",
     "boxicons": "^2.1.4",
     "next": "14.1.0",
-    "nodemailer": "^6.9.8",
+    "nodemailer": "^6.9.11",
     "nookies": "^2.5.2",
     "react": "^18",
     "react-dom": "^18",

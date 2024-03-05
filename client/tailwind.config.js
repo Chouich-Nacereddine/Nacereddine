@@ -5,14 +5,21 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      backgroundImage: (theme) => ({
+        "home-bg-img": "url('/assets/ffff.png')",
+      }),
+      backgroundSize: {
+        60: "70%",
       },
+      backgroundPosition: {
+        "right-19vh": "50vw 9vh",
+      },
+      // Add more customizations as needed
     },
   },
+
   plugins: [],
 };

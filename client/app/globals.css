@@ -43,12 +43,6 @@ header::after {
   }
 }
 
-.Home-bg-img {
-  background: url(/assets/ffff.png) no-repeat;
-  background-size: 60%;
-  background-position: right -19vh;
-}
-
 .text-animated {
   position: relative;
   width: max-content;
@@ -170,21 +164,4 @@ header::after {
 .btn:hover span:not(:nth-child(6)) {
   transform: translate(-50%, -50%) scale(4);
   transition: 1.5s ease;
-}
-
-.bg-shadow {
-  filter: drop-shadow(7px -12px 70px #191919);
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-20px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
 }
