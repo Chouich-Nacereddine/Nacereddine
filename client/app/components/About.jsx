@@ -72,7 +72,7 @@ const About = () => {
               Skills
             </p>
           </div>
-          <div className="h-auto w-full whitespace-normal break-words ">
+          <div className="h-auto w-full ">
             <div
               className={`flex gap-8 pt-8  ${
                 activeLink === "Skills" ? " " : "hidden"
@@ -80,61 +80,61 @@ const About = () => {
             >
               <img
                 src="/assets/html-5.png"
-                className="w-[5%]"
+                className="lg:w-[5%]"
                 alt=""
                 data-aos="fade-up"
               />
               <img
                 src="/assets/css-3.png"
-                className="w-[5%]"
+                className="lg:w-[5%] w-[3%]"
                 alt=""
                 data-aos="fade-down"
               />
               <img
                 src="/assets/sass.png"
-                className="w-[5%]"
+                className="lg:w-[5%] w-[3%]"
                 alt=""
                 data-aos="fade-up"
               />
               <img
                 src="/assets/js.png"
-                className="w-[5%]"
+                className="lg:w-[5%] w-[3%]"
                 alt=""
                 data-aos="fade-down"
               />
               <img
                 src="/assets/atom.png"
-                className="w-[5%]"
+                className="lg:w-[5%] w-[3%]"
                 alt=""
                 data-aos="fade-up"
               />
               <img
                 src="/assets/api.png"
-                className="w-[5%]"
+                className="lg:w-[5%] w-[3%]"
                 alt=""
                 data-aos="fade-down"
               />
               <img
                 src="/assets/nodejs.png"
-                className="w-[5%]"
+                className="lg:w-[5%] w-[3%]"
                 alt=""
                 data-aos="fade-up"
               />
               <img
                 src="/assets/php.png"
-                className="w-[5%]"
+                className="lg:w-[5%] w-[3%]"
                 alt=""
                 data-aos="fade-down"
               />
               <img
                 src="/assets/java.png"
-                className="w-[5%]"
+                className="lg:w-[5%] w-[3%]"
                 alt=""
                 data-aos="fade-up"
               />
               <img
                 src="/assets/mysql.png"
-                className="w-[5%]"
+                className="lg:w-[5%] w-[3%]"
                 alt=""
                 data-aos="fade-down"
               />
