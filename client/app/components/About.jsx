@@ -72,7 +72,7 @@ const About = () => {
               Skills
             </p>
           </div>
-          <div className="h-auto w-full">
+          <div className="h-auto w-full whitespace-normal break-words ">
             <div
               className={`flex gap-8 pt-8  ${
                 activeLink === "Skills" ? " " : "hidden"
