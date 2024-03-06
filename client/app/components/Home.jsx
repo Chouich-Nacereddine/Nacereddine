@@ -87,7 +87,7 @@ const Home = () => {
               </div>
             </Link>
           </div>
-          <div className="absolute lg:left-auto left-[28%] lg:bottom-10 bottom-[98%] flex lg:justify-start gap-6 lg:items-center">
+          <div className="absolute lg:left-auto left-[27%] lg:bottom-10 bottom-[98%] flex lg:justify-start gap-6 lg:items-center">
             <Link
               href="https://www.instagram.com/nacer_edd/?igsh=ZHY2bnB1d2puMWMy&utm_source=qr"
               target="_blanc"
