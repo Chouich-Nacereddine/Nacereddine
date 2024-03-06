@@ -80,61 +80,61 @@ const About = () => {
             >
               <img
                 src="/assets/html-5.png"
-                className="lg:w-[5%]"
+                className="w-[5%]"
                 alt=""
                 data-aos="fade-up"
               />
               <img
                 src="/assets/css-3.png"
-                className="lg:w-[5%] w-[3%]"
+                className="w-[5%]"
                 alt=""
                 data-aos="fade-down"
               />
               <img
                 src="/assets/sass.png"
-                className="lg:w-[5%] w-[3%]"
+                className="w-[5%]"
                 alt=""
                 data-aos="fade-up"
               />
               <img
                 src="/assets/js.png"
-                className="lg:w-[5%] w-[3%]"
+                className="w-[5%]"
                 alt=""
                 data-aos="fade-down"
               />
               <img
                 src="/assets/atom.png"
-                className="lg:w-[5%] w-[3%]"
+                className="w-[5%]"
                 alt=""
                 data-aos="fade-up"
               />
               <img
                 src="/assets/api.png"
-                className="lg:w-[5%] w-[3%]"
+                className="w-[5%]"
                 alt=""
                 data-aos="fade-down"
               />
               <img
                 src="/assets/nodejs.png"
-                className="lg:w-[5%] w-[3%]"
+                className="w-[5%]"
                 alt=""
                 data-aos="fade-up"
               />
               <img
                 src="/assets/php.png"
-                className="lg:w-[5%] w-[3%]"
+                className="w-[5%]"
                 alt=""
                 data-aos="fade-down"
               />
               <img
                 src="/assets/java.png"
-                className="lg:w-[5%] w-[3%]"
+                className="w-[5%]"
                 alt=""
                 data-aos="fade-up"
               />
               <img
                 src="/assets/mysql.png"
-                className="lg:w-[5%] w-[3%]"
+                className="w-[5%]"
                 alt=""
                 data-aos="fade-down"
               />
