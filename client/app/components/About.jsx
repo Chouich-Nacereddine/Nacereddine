@@ -170,7 +170,7 @@ const About = () => {
           >
             <span className="text-[#ff7961]">C</span>ertifications
           </h1>
-          <Row certifications={Certifications} />
+          <Row certifications={Certifications} ROWid="1"/>
         </div>
       )}
     </section>

@@ -19,7 +19,7 @@ const Portfolio = () => {
         <span className="text-[#ff7961]">P</span>ortfolio
       </h1>
       <span className="lg:block hidden">
-        <Row certifications={Projects} />
+        <Row certifications={Projects} ROWid="2" />
       </span>
       {isClient && (
         <div className="lg:hidden flex flex-col">

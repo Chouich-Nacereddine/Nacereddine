@@ -7,14 +7,14 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Certifications from "../../public/tools/Certification.js";
 import { FaLink } from "react-icons/fa6";
 
-const Row = ({ certifications }) => {
+const Row = ({ certifications , ROWid}) => {
   const goLeft = () => {
-    let slider = document.getElementById("slider");
+    let slider = document.getElementById("slider" +ROWid);
     slider.scrollLeft = slider.scrollLeft - 500;
   };
 
   const goRight = () => {
-    let slider = document.getElementById("slider");
+    let slider = document.getElementById("slider" +ROWid);
     slider.scrollLeft = slider.scrollLeft + 500;
   };
   if (!certifications) {
@@ -30,7 +30,7 @@ const Row = ({ certifications }) => {
         />
 
         <div
-          id={"slider"}
+          id={"slider" + ROWid}
           className="w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide "
         >
           {certifications.map((Certif, index) => (
