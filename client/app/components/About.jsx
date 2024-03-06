@@ -17,7 +17,7 @@ const About = () => {
 
   return (
     <section
-      className="lg:min-h-screen h-max overflow-hidden lg:p-[8%] px-[8%]"
+      className="lg:min-h-screen h-max overflow-hidden lg:px-[8%] lg:pt-[8%] px-[8%]"
       id="About"
     >
       <h1
@@ -170,7 +170,7 @@ const About = () => {
           >
             <span className="text-[#ff7961]">C</span>ertifications
           </h1>
-          <Row />
+          <Row certifications={Certifications} />
         </div>
       )}
     </section>
