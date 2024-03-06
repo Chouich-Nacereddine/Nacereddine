@@ -1,17 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import Certifications from "../../public/tools/Certification.js";
+import Row from "./Row.jsx";
 
 const About = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Skills");
-  const [activeCertif, setActiveCertif] = useState("");
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
-    <section className="lg:h-screen h-max overflow-hidden lg:p-[8%] px-[8%]" id="About">
+    <section
+      className="lg:min-h-screen h-max overflow-hidden lg:p-[8%] px-[8%]"
+      id="About"
+    >
       <h1
         className="flex justify-center items-center w-full h-[10vh] lg:text-4xl text-2xl"
         data-aos="zoom-in-down"
@@ -62,66 +70,6 @@ const About = () => {
               }}
             >
               Skills
-            </p>
-            <p
-              className={`hover:text-[#ffd299] hover:font-semibold transition-colors duration-300 ${
-                activeLink === "Certifications"
-                  ? "text-[#ffd299] font-semibold"
-                  : ""
-              }`}
-            >
-              <button
-                id="dropdownDefaultButton"
-                className="lg:flex lg:items-center hidden"
-                type="button"
-                onClick={() => {
-                  setIsOpen(!isOpen);
-                  setActiveLink("Certifications");
-                  setActiveCertif("");
-                }}
-              >
-                Certifications{" "}
-                <svg
-                  className="w-2.5 h-2.5 ms-3"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
-              </button>
-              {isOpen && activeLink === "Certifications" && (
-                <div
-                  id="dropdown"
-                  className="z-10 bg-[#1d1c1c] w-[55vw] mt-4 p-4 rounded-lg h-36 overflow-y-auto scrollbar-custom "
-                >
-                  <ul
-                    className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdownDefaultButton"
-                  >
-                    {Certifications.map((Certif, index) => (
-                      <li
-                        key={index}
-                        className="flex gap-2 p-2 hover:cursor-pointer hover:text-[#ffd299] hover:font-semibold transition-colors duration-300"
-                        onClick={() => {
-                          setIsOpen(!isOpen);
-                          setActiveCertif(Certif.title);
-                        }}
-                      >
-                        <span className="bullet text-[#ff7961]">&#8226;</span>{" "}
-                        <h1>{Certif.title}</h1>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </p>
           </div>
           <div className="h-auto w-full">
@@ -191,62 +139,40 @@ const About = () => {
                 data-aos="fade-down"
               />
             </div>
-            <div className="lg:hidden flex flex-col">
-              <h1 className="flex items-center justify-center mt-6 pr-4 text-[#ffd299] font-semibold">
-                Certifications
-              </h1>
-              <div className="h-max w-full flex flex-wrap">
-                {Certifications.map((Certif, index) => (
- 
-                    <iframe
+
+            {isClient && (
+              <div className="lg:hidden flex flex-col">
+                <h1 className="flex items-center justify-center mt-6  text-[#ffd299] font-semibold">
+                  Certifications
+                </h1>
+                <div className="h-max w-full flex flex-wrap">
+                  {Certifications.map((Certif, index) => (
+                    <img
+                      key={index}
                       className="w-1/2 p-4"
-                      src={`/certif/${Certif.title}.pdf`}
-                      frameborder="0"
+                      src={`/certif/${Certif.title}.jpg`}
                       data-aos={
                         (index + 1) % 2 === 0 ? "fade-left" : "fade-right"
                       }
-                    ></iframe>
-                ))}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-
-            <div
-              className={`gap-8 hidden ${
-                activeLink === "Certifications" ? "lg:flex" : "lg:hidden"
-              }`}
-            >
-              <span className="flex justify-between items-center w-full">
-                <span className="flex flex-col">
-                  <h1 className="text-base text-[#ffd299]">{activeCertif}</h1>
-                  {(() => {
-                    const foundCertif = Certifications.find(
-                      (Certif) => Certif.title === activeCertif
-                    );
-                    if (foundCertif) {
-                      return (
-                        <div>
-                          <h2 className="flex" data-aos="fade-right">
-                            <span className="text-[#ff7961]">From:</span> &nbsp;
-                            {foundCertif.from}
-                          </h2>
-                        </div>
-                      );
-                    } else {
-                      return <h2></h2>;
-                    }
-                  })()}
-                </span>
-                <iframe
-                  className={`block ${activeCertif === "" ? "hidden" : ""}`}
-                  src={`/certif/${activeCertif}.pdf`}
-                  frameborder="0"
-                  data-aos="fade-right"
-                ></iframe>
-              </span>
-            </div>
+            )}
           </div>
         </div>
       </div>
+      {isClient && (
+        <div className="lg:block hidden">
+          <h1
+            className="lg:flex hidden justify-center items-center py-[8%] mt-20 w-full h-[10vh] text-4xl "
+            data-aos="zoom-in-down"
+          >
+            <span className="text-[#ff7961]">C</span>ertifications
+          </h1>
+          <Row />
+        </div>
+      )}
     </section>
   );
 };

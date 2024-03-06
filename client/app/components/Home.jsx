@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import Typed from "typed.js";
-import "boxicons";
 
 const Home = () => {
   const el = useRef(null);
@@ -97,12 +97,12 @@ const Home = () => {
                 onMouseEnter={() => setHover("instagram")}
                 onMouseLeave={() => setHover(null)}
               >
-                <box-icon
+                <FaInstagram
                   type="logo"
                   name="instagram"
                   color={hover === "instagram" ? "black" : "#FF7961"}
-                  size="sm"
-                ></box-icon>
+                  className="w-6 h-6"
+                />
               </span>
             </Link>
             <Link href="https://github.com/Chouich-Nacereddine" target="_blanc">
@@ -111,12 +111,12 @@ const Home = () => {
                 onMouseEnter={() => setHover("github")}
                 onMouseLeave={() => setHover(null)}
               >
-                <box-icon
+                <FaGithub
                   name="github"
                   type="logo"
                   color={hover === "github" ? "black" : "#FF7961"}
-                  size="sm"
-                ></box-icon>
+                  className="h-6 w-6"
+                />
               </span>
             </Link>
             <Link
@@ -128,12 +128,12 @@ const Home = () => {
                 onMouseEnter={() => setHover("linkedin")}
                 onMouseLeave={() => setHover(null)}
               >
-                <box-icon
+                <FaLinkedinIn
                   name="linkedin"
                   type="logo"
                   color={hover === "linkedin" ? "black" : "#FF7961"}
-                  size="sm"
-                ></box-icon>
+                  className="h-6 w-6"
+                />
               </span>
             </Link>
           </div>

@@ -7,7 +7,7 @@ export default function App() {
     <main className='text-white flex-col'>
       <Home/>
       <About/>
-      <Contact/>
+      {/* <Contact/> */}
     </main>
   )
 }
