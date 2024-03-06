@@ -36,8 +36,8 @@ const Home = () => {
 
   return (
     <>
-      <section className="lg:bg-home-bg-img lg:bg-no-repeat lg:bg-right-19vh lg:bg-60 lg:m-0 mb-10 flex flex-col-reverse mt-[10vh] lg:mt-0 lg:flex-row items-center justify-between h-max ">
-        <div className="relative lg:max-w-[55vw] max-w-[100vw] px-[8%] h-max lg:items-start flex flex-col lg:justify-center items-center bg-opacity-10 bg-black lg:pt-0 pt-16 ">
+      <section className="relative lg:bg-home-bg-img lg:bg-no-repeat lg:bg-right-19vh lg:bg-60 lg:m-0 mb-10 flex flex-col-reverse mt-[10vh] lg:mt-0 lg:flex-row items-center justify-between h-max ">
+        <div className=" lg:max-w-[55vw] max-w-[100vw] px-[8%] h-max lg:items-start flex flex-col lg:justify-center items-center bg-opacity-10 bg-black lg:pt-0 pt-16 ">
           <div
             className="lg:text-4xl text-2xl tracking-wider overflow-hidden w-max "
             id="content"
