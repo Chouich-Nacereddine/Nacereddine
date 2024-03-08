@@ -17,7 +17,7 @@ const About = () => {
 
   return (
     <section
-      className="lg:min-h-screen h-max overflow-hidden lg:px-[8%] lg:pt-[8%] px-[8%] overflow-hidden"
+      className="lg:min-h-screen h-max lg:px-[8%] lg:pt-[8%] px-[8%] overflow-hidden"
       id="About"
     >
       <h1

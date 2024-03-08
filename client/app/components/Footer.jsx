@@ -11,9 +11,9 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Nacereddine
+          Nacereddine Chouich.
         </a>
-        &nbsp; Chouich. All rights reserved
+          &nbsp;All rights reserved
       </p>
     </footer>
   );

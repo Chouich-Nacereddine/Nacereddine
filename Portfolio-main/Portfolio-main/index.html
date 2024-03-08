@@ -498,8 +498,38 @@
     </svg>
               </div>
   </section>
+
+
+
+
+    <script> 
     
-    <script type="module" src="index.js"></script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const bubbleDivs = document.querySelectorAll('.bubbles .bubble'); 
+  const Bubbuls = [];
+
+  bubbleDivs.forEach(div => {
+    const styleString = div.getAttribute('style');
+    const stylePairs = styleString.split(';').map(pair => pair.trim().split(':'));
+
+    const bubbleStyle = {};
+    stylePairs.forEach(([property, value]) => {
+       bubbleStyle[property] = value; 
+    });
+
+    Bubbuls.push({ bubbleStyle });
+  });
+
+  // Output the result in the desired format
+  console.log(Bubbuls); 
+});
+    </script>
+
+
+
+
+
+    <script type="module" src="index.js"></>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>

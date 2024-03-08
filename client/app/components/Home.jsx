@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+import { TbBrandFiverr } from "react-icons/tb";
+
 import "aos/dist/aos.css";
 import AOS from "aos";
 import Typed from "typed.js";
@@ -132,6 +134,23 @@ const Home = () => {
                   name="linkedin"
                   type="logo"
                   color={hover === "linkedin" ? "black" : "#FF7961"}
+                  className="h-6 w-6"
+                />
+              </span>
+            </Link>
+            <Link
+              href="https://www.fiverr.com/nacreddine1/build-a-portfolio-website-business-website-with-next-js-and-node-js"
+              target="_blanc"
+            >
+              <span
+                className="border-2 border-[#FF7961] p-1 flex items-center justify-center rounded-full transition-all duration-300 hover:bg-[#FF7961]"
+                onMouseEnter={() => setHover("fiver")}
+                onMouseLeave={() => setHover(null)}
+              >
+                <TbBrandFiverr
+                  name="github"
+                  type="logo"
+                  color={hover === "fiver" ? "black" : "#FF7961"}
                   className="h-6 w-6"
                 />
               </span>

@@ -386,22 +386,95 @@ header::after {
   background-color: black;
   border-color: #ff7961;
   color: #ff7961;
-
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .form-container {
-    width: 90%; 
-    margin: 0 auto; 
+    width: 90%;
+    margin: 0 auto;
   }
 
   .form-container .form-submit-btn {
-    width: 60%; 
+    width: 60%;
   }
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
   .form-container .form-submit-btn {
-    width: 80%; 
+    width: 80%;
   }
+}
+
+.fire-footer {
+  position: relative;
+  background-color: #222;
+  color: white;
+  padding: 0;
+}
+
+.blob-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  bottom: -50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #ff7961, black, #ff7961);
+  animation: flame 5s ease-in-out infinite alternate;
+}
+
+/* Stagger the blobs for a more dynamic effect */
+.blob:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.blob:nth-child(3) {
+  animation-delay: 1s;
+}
+.blob:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.blob:nth-child(5) {
+  animation-delay: 2s;
+}
+.blob:nth-child(6) {
+  animation-delay: 2.5s;
+}
+.blob:nth-child(7) {
+  animation-delay: .5s;
+}
+.blob:nth-child(8) {
+  animation-delay: 1s;
+}
+.blob:nth-child(9) {
+  animation-delay: 1.5s;
+}
+.blob:nth-child(10) {
+  animation-delay: 2s;
+}
+
+@keyframes flame {
+  from {
+    transform: translateY(50px) scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(-100px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.8rem;
 }
