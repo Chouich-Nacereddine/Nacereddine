@@ -11,7 +11,7 @@ const Portfolio = () => {
     setIsClient(true);
   }, []);
   return (
-    <section className="h-max lg:px-[8%] " id="Portfolio">
+    <section className="h-max lg:px-[8%] overflow-hidden " id="Portfolio">
       <h1
         className="lg:flex hidden justify-center items-center py-[5%] mt-20 w-full h-[10vh] text-4xl "
         data-aos="zoom-in-down"
