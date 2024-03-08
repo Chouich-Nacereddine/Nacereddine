@@ -2,10 +2,12 @@ import { FaNodeJs, FaReact } from "react-icons/fa6";
 import { MdSupportAgent } from "react-icons/md";
 import { PiRoadHorizonLight } from "react-icons/pi";
 import { SiExpress, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const Servises = () => {
   return (
-    <section className="h-max px-[8%] overflow-hidden " id="Portfolio">
+    <section className="h-max px-[8%] overflow-hidden pb-10" id="Portfolio">
       <h1
         className="lg:flex hidden justify-center items-center py-[5%] mt-20 w-full h-[10vh] text-4xl "
         data-aos="zoom-in-down"

@@ -3,6 +3,8 @@
 import Row from "./Row";
 import Projects from "../../public/tools/Projects.js";
 import { useEffect, useState } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const Portfolio = () => {
   const [isClient, setIsClient] = useState(false);
