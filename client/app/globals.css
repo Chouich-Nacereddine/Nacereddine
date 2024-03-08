@@ -231,22 +231,21 @@ header::after {
   animation-name: move-down1;
 }
 @media (max-width: 768px) {
-  /* Adjust breakpoint as needed */
   .one-service {
-    margin-top: 1em; /* Reduce margin for smaller screens */
+    margin-top: 1em; 
   }
 
   .services-card {
-    width: 100px; /* Reduce card width */
-    height: 150px;
+    width: 80px; 
+    height: 130px;
   }
 
   .services-card-inner {
-    font-size: 10px; /* Reduce font size */
+    font-size: 10px; 
   }
   .services-circle {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     
   }
 
