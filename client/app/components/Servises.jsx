@@ -12,8 +12,8 @@ const Servises = () => {
       >
         <span className="text-[#ff7961]">S</span> ervice
       </h1>
-      <h1 className="lg:hidden flex items-center justify-center mt-6  text-[#ffd299] font-semibold">
-        Service
+      <h1 className="lg:hidden flex items-center justify-center mt-6 text-2xl font-semibold py-10">
+        <span className="text-[#ff7961]">S</span> ervice
       </h1>
       <div className="flex justify-between">
         <div className="one-service" data-aos="flip-left">

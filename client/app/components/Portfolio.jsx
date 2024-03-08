@@ -23,8 +23,8 @@ const Portfolio = () => {
       </span>
       {isClient && (
         <div className="lg:hidden flex flex-col">
-          <h1 className="flex items-center justify-center mt-6  text-[#ffd299] font-semibold">
-            Portfolio
+          <h1 className="lg:hidden flex items-center justify-center mt-6 text-2xl font-semibold py-10">
+            <span className="text-[#ff7961]">P</span>ortfolio
           </h1>
           <div className="h-max w-full flex flex-wrap">
             {Projects.map((Project, index) => (
