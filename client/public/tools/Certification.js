@@ -16,6 +16,10 @@ const Certifications = [
     from: "IBM",
   },
   {
+    title: "Developing Back-End Apps with Node.js and Express",
+    from: "IBM",
+  },
+  {
     title: "Fundamentals of Java Programming",
     from: "BooRD INFINITY",
   },
