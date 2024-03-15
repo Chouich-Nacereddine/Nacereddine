@@ -20,6 +20,10 @@ const Certifications = [
     from: "IBM",
   },
   {
+    title: "Python for Data Science, AI & Development",
+    from: "IBM",
+  },
+  {
     title: "Fundamentals of Java Programming",
     from: "BooRD INFINITY",
   },
