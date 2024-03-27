@@ -1,7 +1,7 @@
 const Projects = [
   {
     title: "Netflix clone",
-    link: "https://chouich-nacereddine-netflixclone.netlify.app/"
+    link: "https://neflix-clone-beta.vercel.app/"
   },
   {
     title: "Memorie game",
