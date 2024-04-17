@@ -1,5 +1,9 @@
 const Certifications = [
   {
+    title:"IBM Full Stack Software Developer Professional Certificate",
+    from:"IBM"
+  },
+  {
     title: "Introduction to Cloud Computing",
     from: "IBM",
   },
