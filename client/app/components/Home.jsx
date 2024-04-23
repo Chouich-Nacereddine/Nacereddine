@@ -138,7 +138,7 @@ const Home = () => {
                 />
               </span>
             </Link>
-            <Link
+            {/* <Link
               href="https://www.fiverr.com/nacreddine1/build-a-portfolio-website-business-website-with-next-js-and-node-js"
               target="_blanc"
             >
@@ -148,13 +148,13 @@ const Home = () => {
                 onMouseLeave={() => setHover(null)}
               >
                 <TbBrandFiverr
-                  name="github"
+                  name="fiver"
                   type="logo"
                   color={hover === "fiver" ? "black" : "#FF7961"}
                   className="h-6 w-6"
                 />
               </span>
-            </Link>
+            </Link> */}
           </div>
         </div>
 
